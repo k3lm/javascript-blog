@@ -9,7 +9,11 @@ function titleClickHandler(event) {
   for (let activeLink of activeLinks) {
     activeLink.classList.remove('active')
   }
+
   /* add class 'active' to the clicked link */
+  const clickedElement = this
+  clickedElement.classList.add('active')
+  console.log('clickedElement:', clickedElement)
 
   /* remove class 'active' from all articles */
   const activeArticles = document.querySelectorAll('.posts article.active')
